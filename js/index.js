@@ -38,5 +38,58 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img")
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const bigLogo = document.getElementById('cta-img')
+bigLogo.setAttribute('src', siteContent['cta']['img-src'])
+
+const logo3 = document.getElementById("middle-img")
+logo3.setAttribute('src', siteContent
+["main-content"]["middle-img-src"])
+
+const navLinks = document.querySelectorAll("nav a");
+navLinks.forEach((item, i) => {
+  console.log(item)
+  item.textContent = siteContent["nav"][`nav-item-${i + 1}`]
+})
+const header =document.querySelector('header');
+header.style.color = "green";
+
+const logoh1 = document.querySelector('.cta-text h1');
+logoh1.textContent = 'DOM Is Awesome';
+
+const startButton = document.querySelector('.cta .cta-text button');
+startButton.textContent = "Get Started";
+
+//  Above picture content
+const featuresH4 = document.querySelector('.top-content:nth-child(1) h4 ');
+featuresH4.textContent = "Features";
+const featuresText = document.querySelector('.top-content:nth-child(1) p');
+featuresText.textContent = '"Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."'
+const aboutH4 = document.querySelector('.text-content:nth-child(2) h4 ');
+aboutH4.textContent = "About";
+const aboutText = document.querySelector('.text-content:nth-child(2) p');
+aboutText.textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+// const mainContentTop = document.querySelector(.main-content .top-content);
+// mainContentTop.textContent = ""
+// const productContent = document.querySelector( 'div .bottom-content .text-content:nth-of-typeof(2) p')
+// productContent.textContent = ' Enter text here'
+
+
+// createElement    node   ....???? cloneNode
+
+const visionHeader = document.querySelector('div .bottom-content .text-content:nth-of-type-of(3) h4')
+const visionContent =
+visionHeader.textContent = "Vision";
+
+// contactHeader.textContent = 'Contact'
+
+
+
+
+
+const footer = document.querySelector('footer p')
+console.log(footer)
+footer.textContent = "Copyright Great Idea! 2018";
