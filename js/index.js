@@ -50,14 +50,31 @@ logo3.setAttribute('src', siteContent
 
 const navLinks = document.querySelectorAll("nav a");
 navLinks.forEach((item, i) => {
-  console.log(item)
   item.textContent = siteContent["nav"][`nav-item-${i + 1}`]
 })
-const header =document.querySelector('header');
-header.style.color = "green";
+
+// new link
+const blogLink = document.createElement("a");
+blogLink.textContent = "Blog"
+blogLink.href = "#";
+document.querySelector("nav").appendChild(blogLink);
+
+const visitLink =document.createElement("a");
+visitLink.textContent = "Visit";
+visitLink.href = "#";
+document.querySelector("nav").prepend(visitLink);
+
+// link colors
+console.log(navLinks)
+const navColor = document.querySelectorAll("nav a");
+console.log(navColor)
+//navColor.style.color ="green";
+
+// .style.color = "green";
 
 const logoh1 = document.querySelector('.cta-text h1');
 logoh1.textContent = 'DOM Is Awesome';
+logoh1.style.color = "green";
 
 const startButton = document.querySelector('.cta .cta-text button');
 startButton.textContent = "Get Started";
@@ -65,31 +82,52 @@ startButton.textContent = "Get Started";
 //  Above picture content
 const featuresH4 = document.querySelector('.top-content:nth-child(1) h4 ');
 featuresH4.textContent = "Features";
+
 const featuresText = document.querySelector('.top-content:nth-child(1) p');
 featuresText.textContent = '"Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."'
-const aboutH4 = document.querySelector('.text-content:nth-child(2) h4 ');
+
+const aboutH4 = document.querySelector('.top-content .text-content:nth-child(2) h4 ');
 aboutH4.textContent = "About";
 const aboutText = document.querySelector('.text-content:nth-child(2) p');
 aboutText.textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 
-// const mainContentTop = document.querySelector(.main-content .top-content);
-// mainContentTop.textContent = ""
-// const productContent = document.querySelector( 'div .bottom-content .text-content:nth-of-typeof(2) p')
-// productContent.textContent = ' Enter text here'
 
 
-// createElement    node   ....???? cloneNode
+// below picture content
 
-const visionHeader = document.querySelector('div .bottom-content .text-content:nth-of-type-of(3) h4')
-const visionContent =
-visionHeader.textContent = "Vision";
+const servicesH4 = document.querySelector('.bottom-content .text-content:nth-child(1) h4');
+servicesH4.textContent = "Services";
+const servicesText = document.querySelector('.bottom-content .text-content:nth-child(1) p');
+servicesText.textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 
-// contactHeader.textContent = 'Contact'
+const productH4 = document.querySelector('.bottom-content .text-content:nth-child(2) h4 ');
+productH4.textContent = "Product";
+const productText = document.querySelector('.bottom-content .text-content:nth-child(2) p');
+productText.textContent = " Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+const visionH4 = document.querySelector(".bottom-content .text-content:nth-child(3) h4")
+visionH4.textContent = "Vision";
+const visionText = document.querySelector(".bottom-content .text-content:nth-child(3) p")
+visionText.textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+// Contact information
+
+const contactH4 = document.querySelector(".container .contact h4");
+contactH4.textContent = "Contact";
+
+const address = document.querySelector(".container .contact p:nth-of-type(1)");
+address.textContent = "123 Way 456 Street Somewhere, USA"
+
+const phoneNum = document.querySelector(".container .contact p:nth-of-type(2)");
+phoneNum.textContent = "1 (888) 888-8888";
+
+const emailAdd = document.querySelector(".container .contact p:nth-of-type(3)");
+emailAdd.textContent = "sales@greatidea.io"
 
 
 
 
 
 const footer = document.querySelector('footer p')
-console.log(footer)
+
 footer.textContent = "Copyright Great Idea! 2018";
